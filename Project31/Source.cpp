@@ -6,11 +6,10 @@ template<typename T = string, const int MAX_C = 5>
 class libraryitem {
 	string title;
 	int copies[MAX_C];
-	inline static int count;
+	inline static int totalitems;
 public:
 	libraryitem() {
-		title = nullptr;
-		id = nullptr;
+		title = "";
 		for (int i = 0; i < MAX_C; i++) {
 			copies[i] = 0;
 		}
@@ -26,17 +25,17 @@ public:
 	}
 	~libraryitem() {
 		total--;
-		count = total;
+		totalitems = total;
 	}
-	void addcopy(T i) {
+	void addcopy(int i) {
 		copies[i] = 1;
 	}
-	void removecopy(T i) {
+	void removecopy(int i) {
 		copies[i] = 0;
 	}
 	int gettotalitems() {
-		count = total;
-		return count;
+		totalitems = total;
+		return totalitems;
 	}
 	int getcopiescount() {
 		int counter = 0;
