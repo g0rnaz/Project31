@@ -14,6 +14,7 @@ public:
 			copies[i] = 0;
 		}
 		total++;
+		totalitems = total;
 	}
 	libraryitem(string t)
 	{
@@ -22,6 +23,7 @@ public:
 			copies[i] = 0;
 		}
 		total++;
+		totalitems = total;
 	}
 	~libraryitem() {
 		total--;
